@@ -20,7 +20,7 @@ Finding of users distance in done thru distance formula and uses google maps api
 
 ### Sample Nearby User Request
 **Request:**
-```
+```url
 http://getwings.app/api/v1/nearby?api_token=ImEUUzDTiWs3cRgVSGSy5fwhBPyR9YdjdyS3nAoWU2N4qw2txlTZiumtCdME
 ```
 **Response:**
@@ -47,11 +47,11 @@ http://getwings.app/api/v1/nearby?api_token=ImEUUzDTiWs3cRgVSGSy5fwhBPyR9YdjdyS3
 
 ### Sample Profile Request
 **Request**
-```
+```url
 http://getwings.app/api/v1/me?api_token=ImEUUzDTiWs3cRgVSGSy5fwhBPyR9YdjdyS3nAoWU2N4qw2txlTZiumtCdME
 ```
 
-*Response*
+**Response**
 ```json
 {
   "full_name": "Faiyaz Faizan",
