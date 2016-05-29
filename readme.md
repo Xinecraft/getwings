@@ -1,27 +1,70 @@
-# Laravel PHP Framework
+# GetWings Internship Test Project
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
-
+This Project is developed using Laravel framework.
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
 
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+In this project User will be able to
+1) Signup
+2) Login/Login with Google
+3) Get a token for API request.
+4) Set and Change his location
 
-## Official Documentation
+Using API request a User can:
+1) View his profile
+2) View list of users who are online and resides very near to him with help of google maps api.
 
-Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
+Finding of users distance in done thru distance formula and uses google maps api to get location and lng and lat.
 
-## Contributing
+## Request and Response Wiki
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
+### Sample Nearby User Request
+*Request*
+``
+http://getwings.app/api/v1/nearby?api_token=ImEUUzDTiWs3cRgVSGSy5fwhBPyR9YdjdyS3nAoWU2N4qw2txlTZiumtCdME
+``
+*Response*
+```
+[
+  {
+    "id": 2,
+    "full_name": "Faiyaz Faizan",
+    "address": "Mesra, Jharkhand, India",
+    "distance": 2.94935297966003,
+    "units": "kilometers",
+    "is_online": true
+  },
+  {
+    "id": 1,
+    "full_name": "Zishan Ansari",
+    "address": "Jamshedpur, Jharkhand 831001, India",
+    "distance": 106.45262475559,
+    "units": "kilometers",
+    "is_online": false
+  }
+]
+```
 
-## Security Vulnerabilities
+### Sample Profile Request
+*Request*
+``
+http://getwings.app/api/v1/me?api_token=ImEUUzDTiWs3cRgVSGSy5fwhBPyR9YdjdyS3nAoWU2N4qw2txlTZiumtCdME
+``
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
+*Response*
+```
+{
+  "full_name": "Faiyaz Faizan",
+  "email": "faiyaz@test.com",
+  "address": "Mesra, Jharkhand, India",
+  "joined_on": {
+    "date": "2016-05-29 10:53:55",
+    "timezone_type": 3,
+    "timezone": "UTC"
+  }
+}
+```
+
 
 ## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+No License in assigned to this project right now.

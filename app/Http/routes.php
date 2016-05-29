@@ -25,6 +25,6 @@ Route::group(['middleware' => 'web'], function () {
 
 Route::group(['prefix' => 'api/v1'], function () {
 	Route::get('/me', 'ApiController@whoami');
-	Route::get('/mee', 'ApiController@getNeighbours');
+	Route::get('/nearby', 'ApiController@getNeighbours');
 
 });

@@ -30,6 +30,7 @@ class ApiController extends Controller {
 
 	/**
 	 * Get list of all nearby Users preferring online users first.
+	 * @return Response
 	 */
 	public function getNeighbours() {
 		$user = \Auth::guard('api')->user();
