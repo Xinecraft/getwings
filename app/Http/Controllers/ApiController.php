@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class ApiController extends Controller {
 	function __construct() {
-		$this->middleware('auth:api');
+		$this->middleware(['auth:api', 'throttle']);
 	}
 	/**
 	 * Display a listing of the resource.

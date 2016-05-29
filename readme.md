@@ -12,6 +12,7 @@ In this project User will be able to:
 Using API request a User can:
 * View his profile
 * View list of users who are online and resides very near to him with help of google maps api.
+* API is limited to 60 request per min per user.
 
 Finding of users distance in done thru distance formula and uses google maps api to get location and lng and lat.
 
